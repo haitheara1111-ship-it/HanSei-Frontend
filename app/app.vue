@@ -1,6 +1,9 @@
 <template>
-  <div>Check console</div>
-  <NuxtPages />
+  <div>
+        <NuxtRouteAnnouncer />
+    <NuxtPage />
+
+  </div>
 </template>
 
 <script setup>
