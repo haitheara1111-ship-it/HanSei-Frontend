@@ -1,5 +1,8 @@
 <template>
-  <div>
-    <NuxtPages />
-  </div>
+  <div>Check console</div>
+  <NuxtPages />
 </template>
+
+<script setup>
+
+</script>
