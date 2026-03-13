@@ -83,6 +83,7 @@ const menus = reactive([
       { name: "Admin Dashboard", path: "/" },
       { name: "Employee Dashboard", path: "/employees" },
       { name: "HR Dashboard", path: "/HR-page", label: "New" },
+      { name: "Roster Dashboard", path: "/Roster", label: "New" },
     ],
   },
 ]);
