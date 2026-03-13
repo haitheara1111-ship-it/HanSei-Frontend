@@ -1,96 +1,110 @@
+
+<script setup>
+import DashboardCard from '../../components/DashboardCard.vue'
+import WelcomeCard from '../../components/WelcomeCard.vue'
+import EmployeesByDepartment from "../../components/EmployeesByDepartment.vue"
+import EmployeeStatus from "../../components/EmployeeStatus.vue"
+import AttendanceOverview from "../../components/AttendanceOverview.vue"
+import JobApplicants from "../../components/JobsApplicants.vue"
+import EmployeesTable from "../../components/EmployeesTable.vue"
+
+</script>
+
 <template>
+
+
   <div class="flex min-h-screen bg-gray-100">
 
-    <!-- Empty Sidebar Space -->
-    <div class="w-[20%] bg-transparent"></div>
+    <!-- Empty sidebar space -->
+    <div class="w-[20%]"></div>
 
-    <!-- Main Content -->
-    <div class="w-[80%]">
 
-      <!-- Top Navbar -->
-      <header class="bg-white shadow px-6 py-4 flex justify-between items-center">
-        <h1 class="text-xl font-bold">Dashboard</h1>
+    <div class="w-[80%] p-6">
+<WelcomeCard />
+      <div class="grid grid-cols-4 gap-6 mt-6 mb-6">
 
-        <div class="flex items-center gap-4">
-          <input
-            type="text"
-            placeholder="Search..."
-            class="border rounded-lg px-3 py-2 text-sm"
-          />
+        <DashboardCard
+          title="Attendance Overview"
+          value="120/154"
+          linkText="View Details"
+          icon="fa fa-calendar"
+          iconBg="bg-orange-500"
+        />
 
-          <img
-            src="https://i.pravatar.cc/40"
-            class="w-10 h-10 rounded-full"
-          />
-        </div>
-      </header>
+        <DashboardCard
+          title="Total No of Project's"
+          value="90/125"
+          linkText="View All"
+          icon="fa fa-folder"
+          iconBg="bg-teal-700"
+        />
 
-      <!-- Page Content -->
-      <main class="p-6 space-y-6">
+        <DashboardCard
+          title="Total No of Clients"
+          value="69/86"
+          linkText="View All"
+          icon="fa fa-users"
+          iconBg="bg-blue-500"
+        />
 
-        <!-- Cards -->
-        <div class="grid grid-cols-4 gap-6">
+        <DashboardCard
+          title="Total No of Tasks"
+          value="96/100"
+          linkText="View All"
+          icon="fa fa-list"
+          iconBg="bg-pink-500"
+        />
 
-          <div class="bg-white p-6 rounded-xl shadow">
-            <h3 class="text-gray-500 text-sm">Total Employees</h3>
-            <p class="text-2xl font-bold mt-2">120</p>
-          </div>
+        <DashboardCard
+          title="Earnings"
+          value="$21,445"
+          linkText="View All"
+          icon="fa fa-dollar-sign"
+          iconBg="bg-purple-500"
+        />
 
-          <div class="bg-white p-6 rounded-xl shadow">
-            <h3 class="text-gray-500 text-sm">Departments</h3>
-            <p class="text-2xl font-bold mt-2">8</p>
-          </div>
+        <DashboardCard
+          title="Profit This Week"
+          value="$5,544"
+          linkText="View All"
+          icon="fa fa-chart-line"
+          iconBg="bg-red-500"
+        />
 
-          <div class="bg-white p-6 rounded-xl shadow">
-            <h3 class="text-gray-500 text-sm">Projects</h3>
-            <p class="text-2xl font-bold mt-2">34</p>
-          </div>
+        <DashboardCard
+          title="Job Applicants"
+          value="98"
+          linkText="View All"
+          icon="fa fa-user-plus"
+          iconBg="bg-green-500"
+        />
 
-          <div class="bg-white p-6 rounded-xl shadow">
-            <h3 class="text-gray-500 text-sm">Attendance</h3>
-            <p class="text-2xl font-bold mt-2">95%</p>
-          </div>
+        <DashboardCard
+          title="New Hire"
+          value="45/48"
+          linkText="View All"
+          icon="fa fa-user-check"
+          iconBg="bg-gray-800"
+        />
 
-        </div>
+      </div>
 
-        <!-- Table Section -->
-        <div class="bg-white rounded-xl shadow p-6">
-          <h2 class="text-lg font-semibold mb-4">Employees</h2>
+<div class="grid grid-cols-3 gap-6">
 
-          <table class="w-full text-left">
-            <thead>
-              <tr class="border-b text-gray-500 text-sm">
-                <th class="py-3">Name</th>
-                <th>Position</th>
-                <th>Department</th>
-                <th>Status</th>
-              </tr>
-            </thead>
+  <EmployeeStatus />
 
-            <tbody>
-              <tr class="border-b">
-                <td class="py-3">John Doe</td>
-                <td>Developer</td>
-                <td>Engineering</td>
-                <td>
-                  <span class="text-green-600 font-medium">Active</span>
-                </td>
-              </tr>
+  <EmployeesByDepartment />
+  <AttendanceOverview />
+  <JobApplicants />
+  <EmployeesTable />
 
-              <tr class="border-b">
-                <td class="py-3">Anna Smith</td>
-                <td>Designer</td>
-                <td>UI/UX</td>
-                <td>
-                  <span class="text-yellow-600 font-medium">On Leave</span>
-                </td>
-              </tr>
-            </tbody>
-
-          </table>
-        </div>
-
-      </main>
-    </div>
+</div>
+    
   </div>
+
+</div>
+
+
+
+
 </template>
