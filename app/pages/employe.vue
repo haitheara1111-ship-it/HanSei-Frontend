@@ -1,5 +1,5 @@
 <template>
-  <div class="ml-[20%] p-6">
+  <div class="bg-gray-100 w-full p-6">
     <h2 class="text-xl font-bold mb-4">Employee List</h2>
 
     <!-- Filters -->
@@ -88,6 +88,114 @@ const selectedEmployees = ref([]);
 const selectAll = ref(false);
 
 const employees = ref([
+  {
+    id: "ID-001",
+    name: "Anthony Lewis",
+    email: "anthony@example.com",
+    phone: "123 456 789",
+    designation: "Finance",
+    joiningDate: "2024-09-12",
+    status: "Active",
+  },
+  {
+    id: "ID-002",
+    name: "Brian Villalobos",
+    email: "brian@example.com",
+    phone: "179 738 282",
+    designation: "Developer",
+    joiningDate: "2024-10-24",
+    status: "Active",
+  },
+  {
+    id: "ID-003",
+    name: "Rebecca Smith",
+    email: "smith@example.com",
+    phone: "162 892 071",
+    designation: "Executive",
+    joiningDate: "2024-02-22",
+    status: "Inactive",
+  },
+  {
+    id: "ID-004",
+    name: "nha jo",
+    email: "nhakach@gmail.com",
+    phone: "068 098 678",
+    designation: "Executive",
+    joiningDate: "1970-02-22",
+    status: "Active",
+  },
+  {
+    id: "ID-006",
+    name: "Nita niyey derm ke",
+    email: "nitajo@gmail.com",
+    phone: "000 000 000",
+    designation: "Executive",
+    joiningDate: "2000-02-22",
+    status: "Inactive",
+  },
+  {
+    id: "ID-007",
+    name: "Chai kmeng laor",
+    email: "nitajo@gmail.com",
+    phone: "000 000 000",
+    designation: "Developer",
+    joiningDate: "2000-02-22",
+    status: "Active",
+  },
+  {
+    id: "ID-001",
+    name: "Anthony Lewis",
+    email: "anthony@example.com",
+    phone: "123 456 789",
+    designation: "Finance",
+    joiningDate: "2024-09-12",
+    status: "Active",
+  },
+  {
+    id: "ID-002",
+    name: "Brian Villalobos",
+    email: "brian@example.com",
+    phone: "179 738 282",
+    designation: "Developer",
+    joiningDate: "2024-10-24",
+    status: "Active",
+  },
+  {
+    id: "ID-003",
+    name: "Rebecca Smith",
+    email: "smith@example.com",
+    phone: "162 892 071",
+    designation: "Executive",
+    joiningDate: "2024-02-22",
+    status: "Inactive",
+  },
+  {
+    id: "ID-004",
+    name: "nha jo",
+    email: "nhakach@gmail.com",
+    phone: "068 098 678",
+    designation: "Executive",
+    joiningDate: "1970-02-22",
+    status: "Active",
+  },
+  {
+    id: "ID-006",
+    name: "Nita niyey derm ke",
+    email: "nitajo@gmail.com",
+    phone: "000 000 000",
+    designation: "Executive",
+    joiningDate: "2000-02-22",
+    status: "Inactive",
+  },
+  {
+    id: "ID-007",
+    name: "Chai kmeng laor",
+    email: "nitajo@gmail.com",
+    phone: "000 000 000",
+    designation: "Developer",
+    joiningDate: "2000-02-22",
+    status: "Active",
+  },
   {
     id: "ID-001",
     name: "Anthony Lewis",
