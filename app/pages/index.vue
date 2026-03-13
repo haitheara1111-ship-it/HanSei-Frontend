@@ -105,7 +105,7 @@ import SalesOverview from "../../components/SalesOverview.vue"
   </div>
 
   <div class="col-span-6">
-    <SalesOverview />
+    <SalesOverview class="mt-6 mb-6" />
   </div>
 
 
