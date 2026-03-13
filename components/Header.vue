@@ -1,5 +1,5 @@
 <template>
-  <header class="flex items-center justify-between bg-white px-6 py-4 shadow sticky top-0 z-10">
+  <header class="flex items-center justify-between bg-white px-6 py-4 shadow sticky top-0 z-10 w-full">
     <h1 class="text-2xl font-bold text-gray-800">HR Dashboard</h1>
     <div class="flex items-center space-x-4">
       <button class="relative text-gray-600 hover:text-gray-900">
