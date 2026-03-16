@@ -1,4 +1,5 @@
 
+
 <script setup>
 import DashboardCard from '../../components/DashboardCard.vue'
 import WelcomeCard from '../../components/WelcomeCard.vue'
@@ -7,6 +8,8 @@ import EmployeeStatus from "../../components/EmployeeStatus.vue"
 import AttendanceOverview from "../../components/AttendanceOverview.vue"
 import JobApplicants from "../../components/JobsApplicants.vue"
 import EmployeesTable from "../../components/EmployeesTable.vue"
+import TodoWidget from "../../components/TodoWidget.vue"
+import SalesOverview from "../../components/SalesOverview.vue"
 
 </script>
 
@@ -15,11 +18,9 @@ import EmployeesTable from "../../components/EmployeesTable.vue"
 
   <div class="flex min-h-screen bg-gray-100">
 
-    <!-- Empty sidebar space -->
-    <div class="w-[20%]"></div>
 
 
-    <div class="w-[80%] p-6">
+    <div class="w-[100%] p-6">
 <WelcomeCard />
       <div class="grid grid-cols-4 gap-6 mt-6 mb-6">
 
@@ -92,17 +93,32 @@ import EmployeesTable from "../../components/EmployeesTable.vue"
 <div class="grid grid-cols-3 gap-6">
 
   <EmployeeStatus />
-
   <EmployeesByDepartment />
   <AttendanceOverview />
   <JobApplicants />
   <EmployeesTable />
+  <TodoWidget />
+
+</div>
+  <!-- Row 2 -->
+  <div class="col-span-6">
+    <InvoicesWidget />
+  </div>
+
+  <div class="col-span-6">
+    <SalesOverview class="mt-6 mb-6" />
+  </div>
+
+
+  <!-- Row 3 -->
+  <div class="col-span-12">
+    <EmployeesTable />
+  </div>
 
 </div>
     
   </div>
 
-</div>
 
 
 

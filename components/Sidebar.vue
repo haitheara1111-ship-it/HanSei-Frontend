@@ -1,5 +1,5 @@
 <template>
-  <aside class="w-64 h-screen bg-white shadow-lg flex flex-col">
+  <aside class="w-80 h-screen bg-white flex flex-col">
     <!-- Title -->
     <div class="flex items-center justify-center h-16 border-b">
       <span class="font-bold text-lg">HanSei Electronics</span>
@@ -83,6 +83,7 @@ const menus = reactive([
       { name: "Admin Dashboard", path: "/" },
       { name: "Employee Dashboard", path: "/employees" },
       { name: "HR Dashboard", path: "/HR-page", label: "New" },
+      { name: "Roster Dashboard", path: "/Roster", label: "New" },
     ],
   },
 ]);
