@@ -112,14 +112,14 @@
           <p class="text-[10px] text-gray-400 italic mb-8">Compared to yesterday</p>
         </div>
 
-        <div class="grid grid-cols-3 pt-6 border-t border-gray-100">
-          <div v-for="item in summaryItems" :key="item.label" class="text-center">
-            <div class="text-lg font-black text-gray-900 leading-none">{{ item.val }}</div>
-            <div class="text-[9px] font-bold text-gray-400 uppercase mt-1">{{ item.label }}</div>
+          <div class="grid grid-cols-3 pt-6 border-t border-gray-100">
+            <div v-for="item in summaryItems" :key="item.label" class="text-center">
+              <div class="text-lg font-black text-gray-900 leading-none">{{ item.val }}</div>
+              <div class="text-[9px] font-bold text-gray-400 uppercase mt-1">{{ item.label }}</div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
     <hr class="my-12 border-dashed border-gray-300" />
 
