@@ -1,8 +1,4 @@
-<template>
-  <DashboardLayout>
-  
-  </DashboardLayout>
-</template>
+
 
 <script setup>
 import DashboardCard from '../../components/DashboardCard.vue'
