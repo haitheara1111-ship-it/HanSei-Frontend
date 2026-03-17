@@ -9,6 +9,11 @@ import JobApplicants from "../../components/JobsApplicants.vue"
 import EmployeesTable from "../../components/EmployeesTable.vue"
 import TodoWidget from "../../components/TodoWidget.vue"
 import SalesOverview from "../../components/SalesOverview.vue"
+import ProjectsSection from "../../components/ProjectsSection.vue"
+import TasksStatistics from "../../components/TasksStatistics.vue"
+import SchedulesWidget from "../../components/SchedulesWidget.vue"
+import RecentActivities from "../../components/RecentActivities.vue"
+import BirthdaysWidget from "../../components/BirthdaysWidgets.vue"
 
 </script>
 
@@ -95,7 +100,7 @@ import SalesOverview from "../../components/SalesOverview.vue"
   <EmployeesByDepartment />
   <AttendanceOverview />
   <JobApplicants />
-  <EmployeesTable />
+
   <TodoWidget />
 
 </div>
@@ -113,6 +118,32 @@ import SalesOverview from "../../components/SalesOverview.vue"
   <div class="col-span-12">
     <EmployeesTable />
   </div>
+<div class="grid grid-cols-12 gap-6">
+
+  <div class="col-span-6">
+    <ProjectsSection />
+  </div>
+
+  <div class="col-span-6">
+    <TasksStatistics />
+  </div>
+
+</div>
+<div class="grid grid-cols-12 gap-6 mt-6">
+
+<div class="col-span-4">
+<SchedulesWidget/>
+</div>
+
+<div class="col-span-4">
+<RecentActivities/>
+</div>
+
+<div class="col-span-4">
+<BirthdaysWidget/>
+</div>
+
+</div>
 
 </div>
     

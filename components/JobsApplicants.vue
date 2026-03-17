@@ -5,9 +5,9 @@
     <div class="flex justify-between items-center mb-6">
       <h2 class="text-lg font-semibold">Job Applicants</h2>
 
-      <button class="border text-sm px-3 py-1 rounded-md hover:bg-gray-100">
+      <NuxtLink to="/JobsListing"><button class="border text-sm px-3 py-1 rounded-md hover:bg-gray-100">
         View All
-      </button>
+      </button></NuxtLink>
     </div>
 
     <!-- Applicants List -->
