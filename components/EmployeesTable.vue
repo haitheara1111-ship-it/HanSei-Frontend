@@ -1,11 +1,11 @@
 <template>
-  <div class="bg-white rounded-xl shadow p-6">
+  <div class="bg-white rounded-xl shadow p-6 mb-6">
 
     <!-- Header -->
     <div class="flex justify-between items-center mb-6">
       <h2 class="text-lg font-semibold">Employees</h2>
 
-      <button class="bg-orange-500 text-white px-4 py-2 rounded-md text-sm hover:bg-orange-600">
+      <NuxtLink to="/Employee-Dashboard"></NuxtLink><button class="bg-orange-500 text-white px-4 py-2 rounded-md text-sm hover:bg-orange-600">
         View All
       </button>
     </div>

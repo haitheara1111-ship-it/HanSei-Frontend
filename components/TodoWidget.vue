@@ -32,7 +32,7 @@
         class="flex items-center justify-between border-b pb-2"
       >
 
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-3 flex-1">
 
           <input
             type="checkbox"
@@ -40,20 +40,58 @@
             class="w-4 h-4"
           />
 
+          <!-- Normal Text -->
           <span
+            v-if="editingId !== task.id"
             :class="task.done ? 'line-through text-gray-400' : 'text-gray-700'"
           >
             {{ task.text }}
           </span>
 
+          <!-- Edit Input -->
+          <input
+            v-else
+            v-model="editText"
+            class="border rounded px-2 py-1 text-sm w-full"
+          />
+
         </div>
 
-        <button
-          @click="removeTask(task.id)"
-          class="text-red-500 text-sm hover:underline"
-        >
-          Delete
-        </button>
+        <!-- Buttons -->
+        <div class="flex gap-2 text-sm">
+
+          <button
+            v-if="editingId !== task.id"
+            @click="startEdit(task)"
+            class="text-blue-500 hover:underline"
+          >
+            Edit
+          </button>
+
+          <button
+            v-if="editingId === task.id"
+            @click="saveEdit(task)"
+            class="text-green-600 hover:underline"
+          >
+            Save
+          </button>
+
+          <button
+            v-if="editingId === task.id"
+            @click="cancelEdit"
+            class="text-gray-500 hover:underline"
+          >
+            Cancel
+          </button>
+
+          <button
+            @click="removeTask(task.id)"
+            class="text-red-500 hover:underline"
+          >
+            Delete
+          </button>
+
+        </div>
 
       </div>
 
@@ -66,6 +104,8 @@
 import { ref } from "vue"
 
 const newTask = ref("")
+const editingId = ref(null)
+const editText = ref("")
 
 const tasks = ref([
   { id: 1, text: "Review employee reports", done: false },
@@ -87,5 +127,19 @@ const addTask = () => {
 
 const removeTask = (id) => {
   tasks.value = tasks.value.filter(task => task.id !== id)
+}
+
+const startEdit = (task) => {
+  editingId.value = task.id
+  editText.value = task.text
+}
+
+const saveEdit = (task) => {
+  task.text = editText.value
+  editingId.value = null
+}
+
+const cancelEdit = () => {
+  editingId.value = null
 }
 </script>
