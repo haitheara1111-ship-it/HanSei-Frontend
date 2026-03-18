@@ -2,7 +2,12 @@
 
 
   <div class="w-full gap-10 bg-gray-100">
-<h1 class="mt-10">BACK</h1>
+<NuxtLink
+          to="/List-Employee"
+          class="bg-orange-600 text-white px-5 py-2.5 m-5 rounded-lg hover:bg-orange-700 shadow-sm transition-all font-medium inline-block"
+        >
+          BACK
+        </NuxtLink>
 
 <div class=" bg-gray-100 mt-5 ">
     
