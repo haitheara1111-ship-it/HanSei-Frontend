@@ -80,7 +80,7 @@ const menus = reactive([
     submenu: [
       { name: "Admin Dashboard", path: "/" },
       { name: "Employee Dashboard", path: "/Employee-Dashboard" },
-      { name: "HR Dashboard", path: "/HR-page", label: "New" },
+      { name: "Attendance Dashboard", path: "/HR-page", label: "New" },
       { name: "Roster Dashboard", path: "/Roster", label: "New" },
       { name: "Jobs", path: "/JobsListing", label: "" },
       
