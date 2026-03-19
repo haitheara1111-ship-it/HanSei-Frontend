@@ -37,45 +37,10 @@ import BirthdaysWidget from "../../components/BirthdaysWidgets.vue"
           iconBg="bg-orange-500"
         />
 
-        <DashboardCard
-          title="Total No of Project's"
-          value="90/125"
-          linkText="View All"
-          icon="fa fa-folder"
-          iconBg="bg-teal-700"
-        />
 
-        <DashboardCard
-          title="Total No of Clients"
-          value="69/86"
-          linkText="View All"
-          icon="fa fa-users"
-          iconBg="bg-blue-500"
-        />
 
-        <DashboardCard
-          title="Total No of Tasks"
-          value="96/100"
-          linkText="View All"
-          icon="fa fa-list"
-          iconBg="bg-pink-500"
-        />
 
-        <DashboardCard
-          title="Earnings"
-          value="$21,445"
-          linkText="View All"
-          icon="fa fa-dollar-sign"
-          iconBg="bg-purple-500"
-        />
-
-        <DashboardCard
-          title="Profit This Week"
-          value="$5,544"
-          linkText="View All"
-          icon="fa fa-chart-line"
-          iconBg="bg-red-500"
-        />
+    
 
         <DashboardCard
           title="Job Applicants"
@@ -86,7 +51,7 @@ import BirthdaysWidget from "../../components/BirthdaysWidgets.vue"
         />
 
         <DashboardCard
-          title="New Hire"
+          title="Employees"
           value="45/48"
           linkText="View All"
           icon="fa fa-user-check"
@@ -119,17 +84,7 @@ import BirthdaysWidget from "../../components/BirthdaysWidgets.vue"
   <div class="col-span-12">
     <EmployeesTable />
   </div>
-<div class="grid grid-cols-12 gap-6">
 
-  <div class="col-span-6">
-    <ProjectsSection />
-  </div>
-
-  <div class="col-span-6">
-    <TasksStatistics />
-  </div>
-
-</div>
 <div class="grid grid-cols-12 gap-6 mt-6">
 
 <div class="col-span-4">

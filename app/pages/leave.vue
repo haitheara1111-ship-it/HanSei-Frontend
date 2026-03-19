@@ -2,7 +2,6 @@
   <div class="flex min-h-screen bg-gray-100">
 
     <!-- Sidebar -->
-    <Sidebar />
     <div class="flex-1 p-10">
       <div class="flex justify-between items-center mb-6">
         <div>

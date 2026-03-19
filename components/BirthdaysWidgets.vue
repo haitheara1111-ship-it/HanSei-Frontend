@@ -2,40 +2,40 @@
 <div class="bg-white rounded-xl shadow p-6">
 
 <div class="flex justify-between items-center mb-6">
-<h2 class="font-semibold text-lg">Recent Activities</h2>
+<h2 class="font-semibold text-lg">Birthdays</h2>
 <button class="text-sm border px-3 py-1 rounded">View All</button>
 </div>
 
-<div class="space-y-5">
+<div class="space-y-4">
 
 <div
-v-for="activity in activities"
-:key="activity.id"
-class="flex items-center justify-between"
+v-for="person in birthdays"
+:key="person.id"
+class="flex items-center justify-between p-3 rounded-lg border"
 >
 
 <div class="flex items-center gap-3">
 
 <img
-:src="activity.avatar"
+:src="person.avatar"
 class="w-10 h-10 rounded-full"
 />
 
 <div>
 <p class="font-medium">
-{{ activity.name }}
+{{ person.name }}
 </p>
 
 <p class="text-sm text-gray-500">
-{{ activity.text }}
+{{ person.role }}
 </p>
 </div>
 
 </div>
 
-<span class="text-sm text-gray-400">
-{{ activity.time }}
-</span>
+<button class="border px-3 py-1 rounded text-sm">
+Send
+</button>
 
 </div>
 
@@ -45,27 +45,24 @@ class="w-10 h-10 rounded-full"
 </template>
 
 <script setup>
-const activities = [
+const birthdays = [
 {
 id:1,
-name:"Matt Morgan",
-text:"Added New Project HRMS Dashboard",
-time:"05:30 PM",
-avatar:"https://i.pravatar.cc/40?img=10"
+name:"Andrew Jermia",
+role:"IOS Developer",
+avatar:"https://i.pravatar.cc/40?img=15"
 },
 {
 id:2,
-name:"Jay Ze",
-text:"Commented on Uploaded Document",
-time:"05:00 PM",
-avatar:"https://i.pravatar.cc/40?img=11"
+name:"Mary Zeen",
+role:"UI/UX Designer",
+avatar:"https://i.pravatar.cc/40?img=16"
 },
 {
 id:3,
-name:"Mary Donald",
-text:"Approved Task Projects",
-time:"05:30 PM",
-avatar:"https://i.pravatar.cc/40?img=12"
+name:"Antony Lewis",
+role:"Android Developer",
+avatar:"https://i.pravatar.cc/40?img=17"
 }
 ]
 </script>

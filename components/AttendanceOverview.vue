@@ -5,9 +5,9 @@
     <div class="flex justify-between items-center mb-6">
       <h2 class="text-lg font-semibold">Attendance Overview</h2>
 
-      <button class="border px-3 py-1 rounded-md text-sm hover:bg-gray-100">
+      <Nuxtlink to="/ Attendence" class="border px-3 py-1 rounded-md text-sm hover:bg-gray-100">
         Today
-      </button>
+      </Nuxtlink>
     </div>
 
     <!-- Chart -->
