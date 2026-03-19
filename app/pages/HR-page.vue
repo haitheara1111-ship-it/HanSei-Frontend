@@ -46,13 +46,13 @@
           <p class="text-[10px] uppercase font-bold text-gray-500 tracking-widest mb-1">Total Working Days</p>
           <h2 class="text-5xl font-black">300</h2>
         </div>
-        <svg width="100%" height="12" class="mb-8 rounded-full">
+      <svg width="100%" height="12" class="mb-8 rounded-full">
           <rect x="0" width="50%" height="12" fill="#f97316" />
           <rect x="50%" width="20%" height="12" fill="#2dd4bf" />
           <rect x="70%" width="15%" height="12" fill="#fbbf24" />
           <rect x="85%" width="15%" height="12" fill="#f43f5e" />
-        </svg>
-        <ul class="space-y-5 flex-1">
+       </svg>
+          <ul class="space-y-5 flex-1">
           <li v-for="stat in sidebarStats" :key="stat.label" class="flex justify-between items-center group cursor-pointer">
             <span class="flex items-center gap-3 text-gray-400 group-hover:text-white transition">
               <span :class="['w-2.5 h-2.5 rounded-full ring-4 ring-opacity-10', stat.color.replace('bg-', 'ring-'), stat.color]"></span>
@@ -60,21 +60,21 @@
             </span>
             <span class="font-mono font-bold text-sm">{{ stat.value }}</span>
           </li>
-        </ul>
-      </div>
-    </div>
+          </ul>
+          </div>
+          </div>
 
-    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 flex flex-col xl:flex-row items-center gap-10 border-l-8 border-l-orange-500 mb-6">
-      <div class="flex-1 w-full">
-        <div class="flex justify-between items-center mb-4">
+          <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 flex flex-col xl:flex-row items-center gap-10 border-l-8 border-l-orange-500 mb-6">
+          <div class="flex-1 w-full">
+          <div class="flex justify-between items-center mb-4">
            <h3 class="font-bold text-gray-800 text-xl">Attendance Summary</h3>
            <button class="text-[11px] font-bold bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition flex items-center gap-2 shadow-sm">
              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
              DOWNLOAD REPORT
-           </button>
-        </div>
-        <p class="text-sm text-gray-400 font-medium mb-6">Real-time overview of check-ins and operational hours efficiency.</p>
-        <div class="space-y-2">
+          </button>
+          </div>
+          <p class="text-sm text-gray-400 font-medium mb-6">Real-time overview of check-ins and operational hours efficiency.</p>
+         <div class="space-y-2">
           <div class="flex justify-between text-[10px] font-black text-gray-400 uppercase tracking-widest">
             <span>Productivity Intensity</span>
             <span class="text-orange-600 font-black">85% Capacity</span>
@@ -116,7 +116,7 @@
         </div>
       </div>
 
-      <div class="lg:col-span-2 bg-white rounded-2xl shadow-sm p-6 border border-gray-100">
+        <div class="lg:col-span-2 bg-white rounded-2xl shadow-sm p-6 border border-gray-100">
         <div class="flex justify-between items-center mb-6">
           <h3 class="font-bold text-slate-800 text-lg">Late Arrivals & Alerts</h3>
           <span class="text-[10px] bg-red-50 text-red-600 px-3 py-1 rounded-full font-bold uppercase tracking-tighter">Live Updates</span>
