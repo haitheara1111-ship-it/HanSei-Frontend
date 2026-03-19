@@ -30,21 +30,24 @@
 
     <div class="flex items-center justify-end w-64 gap-4">
       
-      <button class="p-2 text-gray-500 hover:bg-gray-50 rounded-lg transition-colors">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <rect x="3" y="3" width="6" height="6" rx="1"></rect>
-          <rect x="15" y="3" width="6" height="6" rx="1"></rect>
-          <rect x="15" y="15" width="6" height="6" rx="1"></rect>
-          <rect x="3" y="15" width="6" height="6" rx="1"></rect>
-        </svg>
-      </button>
-
-      <button class="p-2 text-gray-500 hover:bg-gray-50 rounded-lg transition-colors">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+     
+      <NuxtLink 
+        to="/Setting" 
+        class="p-2 text-gray-500 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors inline-flex items-center justify-center group"
+      >
+        <svg 
+          width="20" 
+          height="20" 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          stroke-width="2"
+          class="group-hover:rotate-45 transition-transform duration-300"
+        >
           <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
           <circle cx="12" cy="12" r="3" />
         </svg>
-      </button>
+      </NuxtLink>
 
       <div class="relative profile-menu-container">
         <div 
