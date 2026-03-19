@@ -1,17 +1,3 @@
-<script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-
-const isProfileOpen = ref(false)
-
-const closeOutside = (e) => {
-  if (!e.target.closest('.profile-menu-container')) {
-    isProfileOpen.value = false
-  }
-}
-
-onMounted(() => window.addEventListener('click', closeOutside))
-onUnmounted(() => window.removeEventListener('click', closeOutside))
-</script>
 
 <template>
   <header class="flex items-center justify-between bg-white px-6 py-2 border-b border-gray-100 sticky top-0 z-50">
@@ -126,3 +112,19 @@ onUnmounted(() => window.removeEventListener('click', closeOutside))
 
   </header>
 </template>
+
+
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+
+const isProfileOpen = ref(false)
+
+const closeOutside = (e) => {
+  if (!e.target.closest('.profile-menu-container')) {
+    isProfileOpen.value = false
+  }
+}
+
+onMounted(() => window.addEventListener('click', closeOutside))
+onUnmounted(() => window.removeEventListener('click', closeOutside))
+</script>
