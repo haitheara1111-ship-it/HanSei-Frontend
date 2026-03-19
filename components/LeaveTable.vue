@@ -67,7 +67,7 @@
       </div>
 
     </div>
-
+    
 </template>
 
 <script setup>
@@ -81,6 +81,7 @@ const requests = ref([
   { id: 5, name: 'Pheaktra', type: 'Vacation', start: '2025-05-15', end: '2025-05-18', status: 'Pending' },
 ])
 
+
 const getStatusClass = (status) => {
   switch (status) {
     case 'Approved': return 'bg-emerald-100 text-emerald-600'
@@ -89,4 +90,5 @@ const getStatusClass = (status) => {
     default: return 'bg-gray-100 text-gray-600'
   }
 }
+
 </script>
