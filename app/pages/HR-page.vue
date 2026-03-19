@@ -46,13 +46,13 @@
           <p class="text-[10px] uppercase font-bold text-gray-500 tracking-widest mb-1">Total Working Days</p>
           <h2 class="text-5xl font-black">300</h2>
         </div>
-      <svg width="100%" height="12" class="mb-8 rounded-full">
+        <svg width="100%" height="12" class="mb-8 rounded-full">
           <rect x="0" width="50%" height="12" fill="#f97316" />
           <rect x="50%" width="20%" height="12" fill="#2dd4bf" />
           <rect x="70%" width="15%" height="12" fill="#fbbf24" />
           <rect x="85%" width="15%" height="12" fill="#f43f5e" />
-       </svg>
-          <ul class="space-y-5 flex-1">
+        </svg>
+        <ul class="space-y-5 flex-1">
           <li v-for="stat in sidebarStats" :key="stat.label" class="flex justify-between items-center group cursor-pointer">
             <span class="flex items-center gap-3 text-gray-400 group-hover:text-white transition">
               <span :class="['w-2.5 h-2.5 rounded-full ring-4 ring-opacity-10', stat.color.replace('bg-', 'ring-'), stat.color]"></span>
@@ -60,71 +60,64 @@
             </span>
             <span class="font-mono font-bold text-sm">{{ stat.value }}</span>
           </li>
-          </ul>
-          </div>
-          </div>
+        </ul>
+      </div>
+    </div>
 
-          <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 flex flex-col xl:flex-row items-center gap-10 border-l-8 border-l-orange-500 mb-6">
-          <div class="flex-1 w-full">
-          <div class="flex justify-between items-center mb-4">
+    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 flex flex-col xl:flex-row items-center gap-10 border-l-8 border-l-orange-500 mb-6">
+      <div class="flex-1 w-full">
+        <div class="flex justify-between items-center mb-4">
            <h3 class="font-bold text-gray-800 text-xl">Attendance Summary</h3>
-           <button class="text-[11px] font-bold bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition flex items-center gap-2 shadow-sm">
+           <button class="text-[11px] font-bold bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition flex items-center gap-2">
              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
              DOWNLOAD REPORT
-          </button>
-          </div>
-          <p class="text-sm text-gray-400 font-medium mb-6">Real-time overview of check-ins and operational hours efficiency.</p>
-         <div class="space-y-2">
+           </button>
+        </div>
+        <p class="text-sm text-gray-400 font-medium mb-6">Real-time overview of check-ins and operational hours.</p>
+        <div class="space-y-2">
           <div class="flex justify-between text-[10px] font-black text-gray-400 uppercase tracking-widest">
             <span>Productivity Intensity</span>
-            <span class="text-orange-600 font-black">85% Capacity</span>
+            <span class="text-orange-600">85% Capacity</span>
           </div>
           <div class="w-full bg-gray-100 h-3 rounded-full overflow-hidden">
-            <div class="bg-orange-500 h-full rounded-full transition-all duration-1000" style="width: 85%"></div>
+            <div class="bg-orange-500 h-full rounded-full" style="width: 85%"></div>
           </div>
         </div>
       </div>
 
       <div class="flex flex-wrap md:flex-nowrap gap-4 w-full xl:w-auto">
         <div v-for="item in summaryItems" :key="item.label" 
-             class="flex-1 min-w-[150px] p-5 border border-gray-200 rounded-2xl bg-gray-50/50 hover:border-orange-200 hover:bg-white transition-all group">
-          <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 group-hover:text-orange-500 transition-colors">{{ item.label }}</div>
+             class="flex-1 min-w-[150px] p-5 border border-gray-100 rounded-2xl bg-gray-50/50 hover:border-orange-200 transition-all">
+          <div class="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2">{{ item.label }}</div>
           <div class="text-2xl font-black text-gray-900">{{ item.val }}</div>
         </div>
       </div>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      
-      <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-        <h4 class="font-bold text-gray-800 mb-8 uppercase text-xs tracking-widest">Violations Statistics</h4>
-        <div class="flex items-end justify-between h-24 gap-3 mb-2">
-          <div class="flex-1 bg-orange-500 rounded-t-md relative" style="height: 90%">
-            <span class="absolute -top-5 left-1/2 -translate-x-1/2 text-[10px] font-black text-orange-600">90%</span>
+      <div class="lg:col-span-1 space-y-6">
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+          <h4 class="font-bold text-gray-800 mb-4">Violations Overview</h4>
+          <div class="flex items-end justify-between h-24 gap-4">
+            <div class="flex-1 bg-orange-500 rounded-t-lg" style="height: 90%"></div>
+            <div class="flex-1 bg-slate-800 rounded-t-lg" style="height: 50%"></div>
+            <div class="flex-1 bg-teal-500 rounded-t-lg" style="height: 75%"></div>
           </div>
-          <div class="flex-1 bg-[#0c2e36] rounded-t-md relative" style="height: 50%">
-            <span class="absolute -top-5 left-1/2 -translate-x-1/2 text-[10px] font-black text-[#0c2e36]">50%</span>
+          <div class="flex justify-between mt-4 text-[10px] font-bold text-gray-400">
+            <span>LATE</span><span>MISSED</span><span>LEAVE</span>
           </div>
-          <div class="flex-1 bg-[#5ea38e] rounded-t-md relative" style="height: 75%">
-            <span class="absolute -top-5 left-1/2 -translate-x-1/2 text-[10px] font-black text-[#5ea38e]">75%</span>
-          </div>
-        </div>
-        <div class="flex justify-between text-[9px] font-bold text-gray-400 uppercase pt-2 border-t border-gray-50">
-          <span>Late</span>
-          <span>Missed</span>
-          <span>Leave</span>
         </div>
       </div>
 
-        <div class="lg:col-span-2 bg-white rounded-2xl shadow-sm p-6 border border-gray-100">
+      <div class="lg:col-span-2 bg-white rounded-2xl shadow-sm p-6 border border-gray-100">
         <div class="flex justify-between items-center mb-6">
           <h3 class="font-bold text-slate-800 text-lg">Late Arrivals & Alerts</h3>
-          <span class="text-[10px] bg-red-50 text-red-600 px-3 py-1 rounded-full font-bold uppercase tracking-tighter">Live Updates</span>
+          <span class="text-[10px] bg-red-50 text-red-600 px-3 py-1 rounded-full font-bold uppercase">Live Updates</span>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div v-for="person in lateEmployees" :key="person.name" class="flex items-center justify-between p-4 border border-slate-50 rounded-xl hover:bg-slate-50 transition-all group">
             <div class="flex items-center gap-4">
-              <div class="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center text-orange-600 font-bold group-hover:bg-orange-500 group-hover:text-white transition-colors">
+              <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 font-bold group-hover:bg-orange-500 group-hover:text-white transition-colors">
                 {{ person.name.charAt(0) }}
               </div>
               <div>
@@ -133,13 +126,12 @@
               </div>
             </div>
             <div class="text-right">
-               <p class="text-[10px] font-bold text-slate-400 uppercase">Checked In</p>
+               <p class="text-[10px] font-bold text-slate-400 uppercase">Check In</p>
                <p class="text-sm font-black text-red-500">{{ person.checkIn }}</p>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </template>
