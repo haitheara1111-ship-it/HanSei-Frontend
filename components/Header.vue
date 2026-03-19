@@ -30,14 +30,7 @@
 
     <div class="flex items-center justify-end w-64 gap-4">
       
-      <button class="p-2 text-gray-500 hover:bg-gray-50 rounded-lg transition-colors">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <rect x="3" y="3" width="6" height="6" rx="1"></rect>
-          <rect x="15" y="3" width="6" height="6" rx="1"></rect>
-          <rect x="15" y="15" width="6" height="6" rx="1"></rect>
-          <rect x="3" y="15" width="6" height="6" rx="1"></rect>
-        </svg>
-      </button>
+     
       <NuxtLink 
         to="/Setting" 
         class="p-2 text-gray-500 hover:bg-orange-50 hover:text-orange-600 rounded-lg transition-colors inline-flex items-center justify-center group"
