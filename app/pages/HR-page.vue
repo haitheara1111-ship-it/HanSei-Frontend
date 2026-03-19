@@ -167,7 +167,7 @@ const sidebarStats = [
 const summaryItems = [
   { label: 'Check-in', val: '2,458' },
   { label: 'Check-out', val: '2,201' },
-  { label: 'Avg Time', val: '9:13 AM' }
+  { label: 'Avg In-Time', val: '9:13 AM' }
 ];
 
 const lateEmployees = [
