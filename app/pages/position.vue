@@ -1,7 +1,7 @@
 <template>
 <div class="p-8 bg-gray-50 w-full">
 
-<h1 class="text-2xl font-semibold mb-6">Job List</h1>
+<h1 class="text-2xl font-semibold mb-6">Position</h1>
 
 <!-- Top Controls -->
 <div class="flex justify-between items-center bg-white p-4 rounded-lg shadow mb-4">
