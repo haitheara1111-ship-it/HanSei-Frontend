@@ -78,7 +78,7 @@ const menus = reactive([
     label: "Hot",
     open: true, // Default open for better UX
     submenu: [
-      { name: "Admin Dashboard", path: "/" },
+      { name: "Admin Dashboard", path: "/dashboard" },
       { name: "Employee Dashboard", path: "/Employee-Dashboard" },
       { name: "Attendance Dashboard", path: "/HR-page", label: "New" },
       { name: "Roster Dashboard", path: "/Roster", label: "New" },
