@@ -1,5 +1,54 @@
 <template>
   <div class="min-h-screen bg-gray-50 p-4 font-sans text-slate-900">
+
+
+    <div class="w-full bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-6">
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="font-bold text-slate-800">Check-in / Check-Out Form</h3>
+        <span class="text-[10px] font-bold text-blue-500 bg-blue-50 px-2 py-1 rounded">QUICK ACTION</span>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4 items-end">
+        <div class="md:col-span-1">
+          <label class="text-[10px] font-bold text-gray-400 uppercase mb-1 block">First Name</label>
+          <input v-model="checkForm.first" type="text" placeholder="First" class="w-full bg-[#f4f9ff] border border-[#e2efff] rounded-lg p-2 text-sm outline-none focus:ring-2 focus:ring-blue-100">
+        </div>
+        <div class="md:col-span-1">
+          <label class="text-[10px] font-bold text-gray-400 uppercase mb-1 block">Last Name</label>
+          <input v-model="checkForm.last" type="text" placeholder="Last" class="w-full bg-[#f4f9ff] border border-[#e2efff] rounded-lg p-2 text-sm outline-none focus:ring-2 focus:ring-blue-100">
+        </div>
+
+        <div class="md:col-span-1 lg:col-span-1">
+          <label class="text-[10px] font-bold text-gray-400 uppercase mb-1 block">Email</label>
+          <input v-model="checkForm.email" type="email" placeholder="example@mail.com" class="w-full bg-[#f4f9ff] border border-[#e2efff] rounded-lg p-2 text-sm outline-none">
+        </div>
+
+        <div class="md:col-span-1">
+          <label class="text-[10px] font-bold text-gray-400 uppercase mb-1 block">Date & Time</label>
+          <div class="flex gap-2">
+            <input v-model="checkForm.date" type="date" class="w-1/2 bg-[#f4f9ff] border border-[#e2efff] rounded-lg p-2 text-[10px]">
+            <input v-model="checkForm.time" type="time" class="w-1/2 bg-[#f4f9ff] border border-[#e2efff] rounded-lg p-2 text-[10px]">
+          </div>
+        </div>
+
+        <div class="flex gap-4 items-center h-10 px-2">
+          <label class="flex items-center gap-2 cursor-pointer">
+            <input type="radio" v-model="checkForm.status" value="in" class="w-4 h-4 text-blue-500">
+            <span class="text-xs font-bold text-slate-600">IN</span>
+          </label>
+          <label class="flex items-center gap-2 cursor-pointer">
+            <input type="radio" v-model="checkForm.status" value="out" class="w-4 h-4 text-blue-500">
+            <span class="text-xs font-bold text-slate-600">OUT</span>
+          </label>
+        </div>
+
+        <div class="md:col-span-1">
+          <button @click="submitCheckForm" class="w-full bg-[#2a85ff] hover:bg-blue-600 text-white font-bold py-2.5 rounded-lg text-xs transition-all uppercase shadow-md shadow-blue-50 active:scale-95">
+            Send
+          </button>
+        </div>
+      </div>
+    </div>
     
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 mb-6">
       <div v-for="card in stats" :key="card.title" class="flex items-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition border border-gray-100">
@@ -168,4 +217,58 @@ const lateEmployees = [
   { name: 'Robert Martinez', role: 'Finance Manager', checkIn: '09:25 AM', severity: 4 },
   { name: 'Megan Walker', role: 'SEO Analyst', checkIn: '09:10 AM', severity: 3 }
 ];
+
+
+import { reactive } from 'vue'
+
+// form state
+const checkForm = reactive({
+  first: '',
+  last: '',
+  email: '',
+  date: '',
+  time: '',
+  status: 'in'
+})
+
+// submit function
+const submitCheckForm = () => {
+  // validation
+  if (!checkForm.first || !checkForm.last) {
+    alert('Please enter your name')
+    return
+  }
+
+  if (!checkForm.email) {
+    alert('Email is required')
+    return
+  }
+
+  if (!checkForm.date || !checkForm.time) {
+    alert('Please select date & time')
+    return
+  }
+
+  // combine date + time
+  const dateTime = `${checkForm.date} ${checkForm.time}`
+
+  // simulate sending data
+  const payload = {
+    first_name: checkForm.first,
+    last_name: checkForm.last,
+    email: checkForm.email,
+    datetime: dateTime,
+    status: checkForm.status
+  }
+
+  console.log('Form Submitted:', payload)
+
+  // reset form
+  checkForm.first = ''
+  checkForm.last = ''
+  checkForm.email = ''
+  checkForm.date = ''
+  checkForm.time = ''
+  checkForm.status = 'in'
+}
 </script>
