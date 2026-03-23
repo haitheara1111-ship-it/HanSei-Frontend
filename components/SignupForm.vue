@@ -11,7 +11,7 @@
 
       <p class="text-gray-500 mb-6">
         Already have an account?
-        <NuxtLink to="/login"class="text-orange-500 cursor-pointer">Log in </NuxtLink>
+        <NuxtLink to="/"class="text-orange-500 cursor-pointer">Log in </NuxtLink>
       </p>
 
       <div class="flex gap-4 mb-4">
@@ -56,12 +56,12 @@
         <span class="hover:text-orange-500 text-gray-700 cursor-pointer">Forgot Password?</span>
       </div>
 
-      <button
+      <NuxtLink to="/dashboard"
         @click="handleSubmit"
         class="w-full text-white bg-orange-500 hover:bg-orange-600 p-3 rounded font-semibold"
       >
         Create account
-      </button>
+      </NuxtLink>
 
       <div class="flex items-center my-6">
         <div class="flex-1 h-px bg-gray-600"></div>

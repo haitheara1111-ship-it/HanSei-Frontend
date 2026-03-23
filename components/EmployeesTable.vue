@@ -5,7 +5,8 @@
     <div class="flex justify-between items-center mb-6">
       <h2 class="text-lg font-semibold">Employees</h2>
 
-      <NuxtLink to="/Employee-Dashboard"></NuxtLink><button class="bg-orange-500 text-white px-4 py-2 rounded-md text-sm hover:bg-orange-600">
+      <NuxtLink to="/Employee-Dashboard"></NuxtLink>
+      <button class="bg-orange-500 text-white px-4 py-2 rounded-md text-sm hover:bg-orange-600">
         View All
       </button>
     </div>
@@ -72,7 +73,7 @@
             <!-- Actions -->
             <td class="text-right">
               <button class="text-blue-500 hover:underline text-sm mr-3">
-                Edit
+                Edit                                                                                                                                                                                                                                                                 
               </button>
 
               <button class="text-red-500 hover:underline text-sm">
