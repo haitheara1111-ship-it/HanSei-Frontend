@@ -64,6 +64,7 @@
 <script setup>
 import { ref } from "vue"
 import { useRouter } from "vue-router"
+fetch("http://127.0.0.1:8000/api/login")
 
 const router = useRouter()
 
